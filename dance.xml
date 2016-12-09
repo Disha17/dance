@@ -1,12 +1,16 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="controls_if" id="218" inline="false" x="-10" y="63">
-    <value name="IF0">
-      <block type="sensor_object" id="226">
-        <field name="OBJECT">LEFTFRONT</field>
+  <block type="movement_forward" id="255" x="-7" y="43">
+    <next>
+      <block type="controls_if" id="218" inline="false">
+        <value name="IF0">
+          <block type="sensor_object" id="226">
+            <field name="OBJECT">LEFTFRONT</field>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="movement_stutter" id="237"></block>
+        </statement>
       </block>
-    </value>
-    <statement name="DO0">
-      <block type="movement_stutter" id="237"></block>
-    </statement>
+    </next>
   </block>
 </xml>
