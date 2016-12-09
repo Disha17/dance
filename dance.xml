@@ -1,16 +1,34 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_forward" id="255" x="-7" y="43">
-    <next>
-      <block type="controls_if" id="218" inline="false">
-        <value name="IF0">
-          <block type="sensor_object" id="226">
-            <field name="OBJECT">LEFTFRONT</field>
-          </block>
-        </value>
-        <statement name="DO0">
-          <block type="movement_stutter" id="237"></block>
-        </statement>
+  <block type="controls_repeat" id="273" inline="true" x="-76" y="164">
+    <value name="TIMES">
+      <block type="math_number" id="280">
+        <field name="NUM">5</field>
       </block>
-    </next>
+    </value>
+    <statement name="DO">
+      <block type="movement_forward" id="255">
+        <next>
+          <block type="robot_delay" id="283" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="290">
+                <field name="NUM">5000</field>
+              </block>
+            </value>
+            <next>
+              <block type="controls_if" id="218" inline="false">
+                <value name="IF0">
+                  <block type="sensor_object" id="226">
+                    <field name="OBJECT">LEFTFRONT</field>
+                  </block>
+                </value>
+                <statement name="DO0">
+                  <block type="movement_stop" id="265"></block>
+                </statement>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </statement>
   </block>
 </xml>
