@@ -1,14 +1,33 @@
 <xml xmlns="http://www.w3.org/1999/xhtml">
-  <block type="movement_reverse" id="127" x="-147" y="92"></block>
-  <block type="controls_whileUntil" id="77" inline="false" x="168" y="191">
+  <block type="controls_whileUntil" id="141" inline="false" x="-9" y="179">
     <field name="MODE">WHILE</field>
     <value name="NUMBER">
-      <block type="sensor_object" id="84">
-        <field name="OBJECT">LEFTFRONT</field>
+      <block type="sensor_button" id="162">
+        <field name="OBJECT">UP</field>
       </block>
     </value>
     <statement name="DO">
-      <block type="movement_reverse" id="107"></block>
+      <block type="movement_forward" id="202">
+        <next>
+          <block type="robot_delay" id="204" inline="true">
+            <value name="DELAY">
+              <block type="math_number" id="211">
+                <field name="NUM">5000</field>
+              </block>
+            </value>
+            <next>
+              <block type="led_select" id="185" inline="true">
+                <field name="ACTION">ON</field>
+                <value name="LED">
+                  <block type="math_number" id="192">
+                    <field name="NUM">1</field>
+                  </block>
+                </value>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
     </statement>
   </block>
 </xml>
