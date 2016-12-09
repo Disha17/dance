@@ -1,1 +1,60 @@
-<xml xmlns="http://www.w3.org/1999/xhtml"></xml>
+<xml xmlns="http://www.w3.org/1999/xhtml">
+  <block type="led_select" id="9" inline="true" x="138" y="134">
+    <field name="ACTION">ON</field>
+    <value name="LED">
+      <block type="math_number" id="21">
+        <field name="NUM">1</field>
+      </block>
+    </value>
+    <next>
+      <block type="led_select" id="10" inline="true">
+        <field name="ACTION">ON</field>
+        <value name="LED">
+          <block type="math_number" id="22">
+            <field name="NUM">2</field>
+          </block>
+        </value>
+        <next>
+          <block type="led_select" id="11" inline="true">
+            <field name="ACTION">ON</field>
+            <value name="LED">
+              <block type="math_number" id="23">
+                <field name="NUM">3</field>
+              </block>
+            </value>
+            <next>
+              <block type="led_select" id="12" inline="true">
+                <field name="ACTION">ON</field>
+                <value name="LED">
+                  <block type="math_number" id="24">
+                    <field name="NUM">4</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="led_select" id="13" inline="true">
+                    <field name="ACTION">ON</field>
+                    <value name="LED">
+                      <block type="math_number" id="26">
+                        <field name="NUM">5</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="led_select" id="14" inline="true">
+                        <field name="ACTION">ON</field>
+                        <value name="LED">
+                          <block type="math_number" id="25">
+                            <field name="NUM">6</field>
+                          </block>
+                        </value>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </next>
+      </block>
+    </next>
+  </block>
+</xml>
